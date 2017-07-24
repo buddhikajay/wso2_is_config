@@ -169,19 +169,19 @@
         -->
         <UserStoreManager class="org.wso2.carbon.user.core.ldap.ReadWriteLDAPUserStoreManager">
             <Property name="TenantManager">org.wso2.carbon.user.core.tenant.CommonHybridLDAPTenantManager</Property>
-            <Property name="ConnectionURL">ldap://localhost:${Ports.EmbeddedLDAP.LDAPServerPort}</Property>
-            <Property name="ConnectionName">uid=admin,ou=system</Property>
+            <Property name="ConnectionURL">ldap://172.17.0.2:389</Property>
+            <Property name="ConnectionName">cn=admin,dc=example,dc=org</Property>
             <Property name="ConnectionPassword">admin</Property>
             <Property name="AnonymousBind">false</Property>
-            <Property name="UserSearchBase">ou=Users,dc=wso2,dc=org</Property>
-            <Property name="UserEntryObjectClass">identityPerson</Property>
-            <Property name="UserNameAttribute">uid</Property>
-            <Property name="UserNameSearchFilter">(&amp;(objectClass=person)(uid=?))</Property>
-            <Property name="UserNameListFilter">(objectClass=person)</Property>
+            <Property name="UserSearchBase">ou=Users,dc=example,dc=org</Property>
+            <Property name="UserEntryObjectClass">inetOrgPerson</Property>
+            <Property name="UserNameAttribute">cn</Property>
+            <Property name="UserNameSearchFilter">(&amp;(objectClass=inetOrgPerson)(cn=?))</Property>
+            <Property name="UserNameListFilter">(objectClass=inetOrgPerson)</Property>
             <Property name="DisplayNameAttribute"/>
             <Property name="ReadGroups">true</Property>
             <Property name="WriteGroups">true</Property>
-            <Property name="GroupSearchBase">ou=Groups,dc=wso2,dc=org</Property>
+            <Property name="GroupSearchBase">ou=Groups,dc=example,dc=org</Property>
             <Property name="GroupEntryObjectClass">groupOfNames</Property>
             <Property name="GroupNameAttribute">cn</Property>
             <Property name="GroupNameSearchFilter">(&amp;(objectClass=groupOfNames)(cn=?))</Property>
