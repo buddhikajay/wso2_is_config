@@ -179,7 +179,7 @@
 			<Claim>
 				<ClaimURI>http://wso2.org/claims/userid</ClaimURI>
 				<DisplayName>User ID</DisplayName>
-				<AttributeID>scimId</AttributeID>
+				<AttributeID>postalCode</AttributeID>
 				<Description>Unique ID of the user</Description>
 				<ReadOnly/>
 			</Claim>
@@ -193,14 +193,14 @@
 			<Claim>
 				<ClaimURI>http://wso2.org/claims/created</ClaimURI>
 				<DisplayName>Created Time</DisplayName>
-				<AttributeID>createdDate</AttributeID>
+				<AttributeID>streetAddress</AttributeID>
 				<Description>Created timestamp of the user</Description>
 				<ReadOnly/>
 			</Claim>
 			<Claim>
 				<ClaimURI>http://wso2.org/claims/modified</ClaimURI>
 				<DisplayName>Last Modified Time</DisplayName>
-				<AttributeID>lastModifiedDate</AttributeID>
+				<AttributeID>homePostalAddress</AttributeID>
 				<Description>Last Modified timestamp of the user</Description>
 				<ReadOnly/>
 			</Claim>
